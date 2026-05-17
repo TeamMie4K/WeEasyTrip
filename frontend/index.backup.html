@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeEasyTrip</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background: aurora orbs + grid + grain -->
+  <div class="bg-layers" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-aurora">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+      <div class="orb orb-5"></div>
+    </div>
+    <div class="bg-grain"></div>
+  </div>
+
+  <!-- Top navigation -->
+  <nav class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>WeEasyTrip</h1>
+        <span class="brand-tag">AI-Powered Itinerary</span>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span id="apiStatus" class="api-status">
+        <span class="dot"></span>
+        <span class="status-text">connecting...</span>
+      </span>
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        <span>Genetic Algorithm × Thailand Travel</span>
+      </div>
+      <h2>วางแผนเที่ยว<br><span class="grad-text">ที่เหมาะกับงบของคุณ</span></h2>
+      <p class="hero-sub">ระบบใช้ Optimization Algorithm หาเส้นทางที่ดีที่สุด<br>ภายใต้งบประมาณ เวลา และช่วงเวลาเปิด-ปิดของแต่ละสถานที่</p>
+    </div>
+
+    <div class="planner-card glass">
+      <div class="planner-header">
+        <h3>วางแผนทริป</h3>
+        <span class="step-badge">Step 1</span>
+      </div>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>จังหวัดที่จะไป</label>
+          <select id="province" class="select-input">
+            <option value="phuket">ภูเก็ต</option>
+            <optgroup label="ภาคเหนือ">
+              <option disabled>เชียงใหม่</option>
+              <option disabled>เชียงราย</option>
+              <option disabled>แม่ฮ่องสอน</option>
+              <option disabled>น่าน</option>
+              <option disabled>พะเยา</option>
+              <option disabled>แพร่</option>
+              <option disabled>ลำปาง</option>
+              <option disabled>ลำพูน</option>
+              <option disabled>อุตรดิตถ์</option>
+            </optgroup>
+            <optgroup label="ภาคตะวันออกเฉียงเหนือ (อีสาน)">
+              <option disabled>กาฬสินธุ์</option>
+              <option disabled>ขอนแก่น</option>
+              <option disabled>ชัยภูมิ</option>
+              <option disabled>นครพนม</option>
+              <option disabled>นครราชสีมา</option>
+              <option disabled>บึงกาฬ</option>
+              <option disabled>บุรีรัมย์</option>
+              <option disabled>มหาสารคาม</option>
+              <option disabled>มุกดาหาร</option>
+              <option disabled>ยโสธร</option>
+              <option disabled>ร้อยเอ็ด</option>
+              <option disabled>เลย</option>
+              <option disabled>ศรีสะเกษ</option>
+              <option disabled>สกลนคร</option>
+              <option disabled>สุรินทร์</option>
+              <option disabled>หนองคาย</option>
+              <option disabled>หนองบัวลำภู</option>
+              <option disabled>อุดรธานี</option>
+              <option disabled>อุบลราชธานี</option>
+              <option disabled>อำนาจเจริญ</option>
+            </optgroup>
+            <optgroup label="ภาคกลาง">
+              <option disabled>กรุงเทพมหานคร</option>
+              <option disabled>กำแพงเพชร</option>
+              <option disabled>ชัยนาท</option>
+              <option disabled>นครนายก</option>
+              <option disabled>นครปฐม</option>
+              <option disabled>นครสวรรค์</option>
+              <option disabled>นนทบุรี</option>
+              <option disabled>ปทุมธานี</option>
+              <option disabled>พระนครศรีอยุธยา</option>
+              <option disabled>พิจิตร</option>
+              <option disabled>พิษณุโลก</option>
+              <option disabled>เพชรบูรณ์</option>
+              <option disabled>ลพบุรี</option>
+              <option disabled>สมุทรปราการ</option>
+              <option disabled>สมุทรสงคราม</option>
+              <option disabled>สมุทรสาคร</option>
+              <option disabled>สระบุรี</option>
+              <option disabled>สิงห์บุรี</option>
+              <option disabled>สุโขทัย</option>
+              <option disabled>สุพรรณบุรี</option>
+              <option disabled>อ่างทอง</option>
+              <option disabled>อุทัยธานี</option>
+            </optgroup>
+            <optgroup label="ภาคตะวันออก">
+              <option disabled>จันทบุรี</option>
+              <option disabled>ฉะเชิงเทรา</option>
+              <option disabled>ชลบุรี</option>
+              <option disabled>ตราด</option>
+              <option disabled>ปราจีนบุรี</option>
+              <option disabled>ระยอง</option>
+              <option disabled>สระแก้ว</option>
+            </optgroup>
+            <optgroup label="ภาคตะวันตก">
+              <option disabled>กาญจนบุรี</option>
+              <option disabled>ตาก</option>
+              <option disabled>ประจวบคีรีขันธ์</option>
+              <option disabled>เพชรบุรี</option>
+              <option disabled>ราชบุรี</option>
+            </optgroup>
+            <optgroup label="ภาคใต้">
+              <option disabled>กระบี่</option>
+              <option disabled>ชุมพร</option>
+              <option disabled>ตรัง</option>
+              <option disabled>นครศรีธรรมราช</option>
+              <option disabled>นราธิวาส</option>
+              <option disabled>ปัตตานี</option>
+              <option disabled>พังงา</option>
+              <option disabled>พัทลุง</option>
+              <option disabled>ยะลา</option>
+              <option disabled>ระนอง</option>
+              <option disabled>สงขลา</option>
+              <option disabled>สตูล</option>
+              <option disabled>สุราษฎร์ธานี</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>งบประมาณรวม</label>
+          <div class="input-with-unit">
+            <input type="number" id="budget" value="20000" min="1000" step="500" />
+            <span class="unit">บาท</span>
+          </div>
+          <div class="input-hint">1,000 - 100,000 บาท</div>
+        </div>
+        <div class="form-group full">
+          <label>ช่วงวันเดินทาง</label>
+          <div class="date-range-input">
+            <svg class="date-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <input type="text" id="dateRange" placeholder="เลือกช่วงวันเดินทาง..." readonly />
+          </div>
+          <div class="date-summary" id="dateSummary">เลือกวันเช็คอินและเช็คเอาต์</div>
+        </div>
+        <div class="form-group full">
+          <label>จำนวนคน</label>
+          <div class="counter-control">
+            <button onclick="changeTravelers(-1)">−</button>
+            <input type="number" id="travelers" value="2" min="1" max="10" readonly />
+            <button onclick="changeTravelers(1)">+</button>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>ตัวเลือกที่พัก</label>
+          <div class="hotel-card" id="hotelOptionCard" onclick="toggleHotelOption()">
+            <div class="hotel-card-icon" id="hotelCardIcon">🏨</div>
+            <div class="hotel-card-body">
+              <div class="hotel-card-title-row">
+                <span class="hotel-card-title" id="hotelToggleLabel">รวมค่าโรงแรมในงบประมาณ</span>
+              </div>
+              <span class="hotel-card-hint" id="hotelToggleHint">ระบบจะหักค่าโรงแรมออกจากงบก่อนวางแผนกิจกรรม</span>
+            </div>
+            <div class="hotel-card-switch" onclick="event.stopPropagation()">
+              <input type="checkbox" id="includeHotel" checked onchange="onHotelToggle()" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>อัลกอริทึม</label>
+          <div class="algo-segment" id="algoControl">
+            <button data-val="greedy"  title="เร็วสุด - locally optimal">⚡ Greedy</button>
+            <button data-val="ga"      title="Global optimization - ช้ากว่า แต่ผลดีในทริปยาว">🧬 GA</button>
+            <button data-val="hybrid" class="active" title="Greedy seed + GA refine + 2-opt (แนะนำ)">⭐ Hybrid</button>
+          </div>
+          <div class="input-hint" id="algoHint">⭐ Hybrid: รวมข้อดีของทั้ง Greedy และ GA + 2-opt local search</div>
+        </div>
+      </div>
+      <button id="searchBtn" class="cta-btn" onclick="searchPackages()">
+        <span class="btn-content">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          <span>ค้นหาแพ็กเกจ</span>
+        </span>
+        <span class="btn-loader">
+          <svg class="spinner" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="3" fill="none"></circle></svg>
+          <span>กำลังคำนวณด้วย GA...</span>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Packages section -->
+  <section class="packages-section" id="packagesSection" style="display:none;">
+    <div class="section-head">
+      <div>
+        <span class="step-badge">Step 2</span>
+        <h2>เลือกแพ็กเกจที่คุณชอบ</h2>
+      </div>
+      <div class="meta-summary" id="metaSummary"></div>
+    </div>
+    <div class="packages-grid" id="packagesRow"></div>
+  </section>
+
+  <!-- Detail section: side panel + map -->
+  <section class="detail-section" id="detailPanel" style="display:none;">
+    <div class="section-head">
+      <div>
+        <span class="step-badge">Step 3</span>
+        <h2 id="detailTitle">ปรับแต่งทริปของคุณ</h2>
+      </div>
+      <div class="detail-actions">
+        <span class="kpi" id="kpiScore"><span class="kpi-label">Score</span><span class="kpi-val">—</span></span>
+        <span class="kpi" id="kpiCost"><span class="kpi-label">Cost</span><span class="kpi-val">—</span></span>
+        <span class="kpi" id="kpiPois"><span class="kpi-label">POIs</span><span class="kpi-val">—</span></span>
+        <button class="reshuffle-btn" onclick="reshufflePackage()" title="สุ่มสถานที่ใหม่ด้วย algorithm เดิม">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          Re-shuffle
+        </button>
+      </div>
+    </div>
+    <div class="detail-grid">
+      <div class="day-list" id="dayPanels"></div>
+      <div class="map-wrap">
+        <div class="day-toggles" id="dayToggles"></div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading skeleton template -->
+  <template id="skeletonTemplate">
+    <div class="package-card skeleton">
+      <div class="sk sk-tier"></div>
+      <div class="sk sk-title"></div>
+      <div class="sk sk-row"></div>
+      <div class="sk sk-row"></div>
+      <div class="sk sk-row"></div>
+    </div>
+  </template>
+
+  <!-- Swap modal -->
+  <div class="modal" id="swapModal">
+    <div class="modal-backdrop" onclick="closeSwapModal()"></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div class="modal-title" id="swapTitle">เปลี่ยนสถานที่</div>
+          <div class="modal-sub" id="swapCurrentInfo"></div>
+        </div>
+        <button class="icon-btn" onclick="closeSwapModal()" title="ปิด">✕</button>
+      </div>
+      <div class="modal-search">
+        <input type="text" id="swapFilter" placeholder="🔍 ค้นหาสถานที่..." oninput="filterSwapList()" />
+      </div>
+      <div class="modal-body">
+        <ul id="swapList" class="swap-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="app.js"></script>
+</body>
+</html>

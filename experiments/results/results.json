@@ -1,0 +1,824 @@
+{
+  "S1_Short_Budget": {
+    "Greedy": {
+      "n": 1,
+      "valid": 1,
+      "score_stats": {
+        "mean": 148.1,
+        "stdev": 0,
+        "max": 148.1,
+        "min": 148.1,
+        "median": 148.1
+      },
+      "time_stats": {
+        "mean": 0,
+        "stdev": 0,
+        "max": 0,
+        "min": 0,
+        "median": 0
+      },
+      "trials": [
+        {
+          "score": 148.1,
+          "valid": true,
+          "ms": 0.0
+        }
+      ],
+      "avg_history": []
+    },
+    "GA": {
+      "n": 15,
+      "valid": 15,
+      "score_stats": {
+        "mean": 147.51,
+        "stdev": 3.23,
+        "max": 151.1,
+        "min": 140.3,
+        "median": 148.0
+      },
+      "time_stats": {
+        "mean": 0,
+        "stdev": 0,
+        "max": 0,
+        "min": 0,
+        "median": 0
+      },
+      "trials": [
+        {
+          "score": 150.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 148.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 146.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 148.0,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 145.4,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 147.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 150.4,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 149.9,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 140.3,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 145.5,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.1,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 148.9,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 141.7,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 147.2,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 150.8,
+          "valid": true,
+          "ms": 0.0
+        }
+      ],
+      "avg_history": [
+        150.67,
+        152.53,
+        153.89,
+        154.27,
+        157.19,
+        159.24,
+        160.35,
+        163.81,
+        166.49,
+        170.07,
+        171.62,
+        174.75,
+        175.27,
+        176.89,
+        178.39,
+        180.94,
+        182.94,
+        185.07,
+        187.67,
+        188.79,
+        189.86,
+        191.39,
+        193.95,
+        196.6,
+        196.69,
+        198.72
+      ]
+    },
+    "Hybrid": {
+      "n": 15,
+      "valid": 15,
+      "score_stats": {
+        "mean": 152.22,
+        "stdev": 0.88,
+        "max": 154.0,
+        "min": 150.1,
+        "median": 152.2
+      },
+      "time_stats": {
+        "mean": 0,
+        "stdev": 0,
+        "max": 0,
+        "min": 0,
+        "median": 0
+      },
+      "trials": [
+        {
+          "score": 153.0,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 153.1,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 152.8,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.9,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 152.5,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 152.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 152.2,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.8,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.9,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 152.4,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.6,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 154.0,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 151.8,
+          "valid": true,
+          "ms": 0.0
+        },
+        {
+          "score": 150.1,
+          "valid": true,
+          "ms": 0.0
+        }
+      ],
+      "avg_history": [
+        165.23,
+        165.34,
+        165.47,
+        165.63,
+        165.68,
+        165.83,
+        166.05,
+        166.16,
+        166.2,
+        166.31,
+        166.44,
+        166.48,
+        166.57,
+        166.65,
+        166.7,
+        166.77,
+        166.88,
+        167.09,
+        167.17,
+        167.21,
+        167.22
+      ]
+    },
+    "kruskal": {
+      "H": 21.0258,
+      "p": 2.7e-05,
+      "sig": "***"
+    }
+  },
+  "S2_Medium_Standard": {
+    "Greedy": {
+      "n": 1,
+      "valid": 1,
+      "score_stats": {
+        "mean": 244.6,
+        "stdev": 0,
+        "max": 244.6,
+        "min": 244.6,
+        "median": 244.6
+      },
+      "time_stats": {
+        "mean": 8.0,
+        "stdev": 0,
+        "max": 8.0,
+        "min": 8.0,
+        "median": 8.0
+      },
+      "trials": [
+        {
+          "score": 244.6,
+          "valid": true,
+          "ms": 8.0
+        }
+      ],
+      "avg_history": []
+    },
+    "GA": {
+      "n": 15,
+      "valid": 15,
+      "score_stats": {
+        "mean": 244.49,
+        "stdev": 1.59,
+        "max": 246.7,
+        "min": 240.9,
+        "median": 244.8
+      },
+      "time_stats": {
+        "mean": 517.96,
+        "stdev": 24.84,
+        "max": 599.8,
+        "min": 494.2,
+        "median": 515.2
+      },
+      "trials": [
+        {
+          "score": 246.7,
+          "valid": true,
+          "ms": 532.2
+        },
+        {
+          "score": 244.1,
+          "valid": true,
+          "ms": 494.2
+        },
+        {
+          "score": 242.6,
+          "valid": true,
+          "ms": 520.0
+        },
+        {
+          "score": 240.9,
+          "valid": true,
+          "ms": 508.4
+        },
+        {
+          "score": 244.7,
+          "valid": true,
+          "ms": 516.9
+        },
+        {
+          "score": 244.0,
+          "valid": true,
+          "ms": 501.9
+        },
+        {
+          "score": 245.0,
+          "valid": true,
+          "ms": 508.0
+        },
+        {
+          "score": 245.7,
+          "valid": true,
+          "ms": 523.5
+        },
+        {
+          "score": 246.5,
+          "valid": true,
+          "ms": 599.8
+        },
+        {
+          "score": 242.2,
+          "valid": true,
+          "ms": 522.5
+        },
+        {
+          "score": 245.8,
+          "valid": true,
+          "ms": 501.7
+        },
+        {
+          "score": 245.0,
+          "valid": true,
+          "ms": 515.2
+        },
+        {
+          "score": 245.2,
+          "valid": true,
+          "ms": 500.2
+        },
+        {
+          "score": 244.1,
+          "valid": true,
+          "ms": 509.3
+        },
+        {
+          "score": 244.8,
+          "valid": true,
+          "ms": 515.6
+        }
+      ],
+      "avg_history": [
+        245.83,
+        246.25,
+        246.67,
+        248.35,
+        248.81,
+        251.4,
+        253.93,
+        256.49,
+        258.53,
+        260.64,
+        262.19,
+        264.19,
+        266.73,
+        267.73,
+        271.96,
+        274.45,
+        276.43,
+        278.03,
+        280.65,
+        283.53,
+        284.68,
+        286.23,
+        289.35,
+        289.41,
+        291.49,
+        293.94
+      ]
+    },
+    "Hybrid": {
+      "n": 15,
+      "valid": 15,
+      "score_stats": {
+        "mean": 247.55,
+        "stdev": 1.03,
+        "max": 248.9,
+        "min": 245.6,
+        "median": 247.7
+      },
+      "time_stats": {
+        "mean": 162.63,
+        "stdev": 10.23,
+        "max": 185.9,
+        "min": 148.2,
+        "median": 160.8
+      },
+      "trials": [
+        {
+          "score": 246.7,
+          "valid": true,
+          "ms": 185.9
+        },
+        {
+          "score": 246.7,
+          "valid": true,
+          "ms": 154.1
+        },
+        {
+          "score": 248.7,
+          "valid": true,
+          "ms": 148.6
+        },
+        {
+          "score": 247.3,
+          "valid": true,
+          "ms": 160.4
+        },
+        {
+          "score": 247.0,
+          "valid": true,
+          "ms": 180.0
+        },
+        {
+          "score": 248.4,
+          "valid": true,
+          "ms": 161.0
+        },
+        {
+          "score": 248.9,
+          "valid": true,
+          "ms": 157.4
+        },
+        {
+          "score": 246.4,
+          "valid": true,
+          "ms": 159.6
+        },
+        {
+          "score": 248.5,
+          "valid": true,
+          "ms": 168.2
+        },
+        {
+          "score": 248.4,
+          "valid": true,
+          "ms": 165.8
+        },
+        {
+          "score": 245.6,
+          "valid": true,
+          "ms": 165.6
+        },
+        {
+          "score": 248.7,
+          "valid": true,
+          "ms": 166.7
+        },
+        {
+          "score": 247.8,
+          "valid": true,
+          "ms": 160.8
+        },
+        {
+          "score": 247.7,
+          "valid": true,
+          "ms": 157.1
+        },
+        {
+          "score": 246.5,
+          "valid": true,
+          "ms": 148.2
+        }
+      ],
+      "avg_history": [
+        270.59,
+        270.61,
+        270.66,
+        270.71,
+        270.72,
+        270.89,
+        271.05,
+        271.25,
+        271.35,
+        271.59,
+        271.71,
+        271.76,
+        271.86,
+        272.09,
+        272.16,
+        272.31,
+        272.35,
+        272.39,
+        272.52,
+        272.55,
+        272.55
+      ]
+    },
+    "kruskal": {
+      "H": 19.4786,
+      "p": 5.9e-05,
+      "sig": "***"
+    }
+  },
+  "S3_Long_Premium": {
+    "Greedy": {
+      "n": 1,
+      "valid": 0,
+      "score_stats": {
+        "mean": 346.7,
+        "stdev": 0,
+        "max": 346.7,
+        "min": 346.7,
+        "median": 346.7
+      },
+      "time_stats": {
+        "mean": 10.6,
+        "stdev": 0,
+        "max": 10.6,
+        "min": 10.6,
+        "median": 10.6
+      },
+      "trials": [
+        {
+          "score": 346.7,
+          "valid": false,
+          "ms": 10.6
+        }
+      ],
+      "avg_history": []
+    },
+    "GA": {
+      "n": 15,
+      "valid": 15,
+      "score_stats": {
+        "mean": 332.12,
+        "stdev": 8.04,
+        "max": 338.1,
+        "min": 303.6,
+        "median": 334.0
+      },
+      "time_stats": {
+        "mean": 706.06,
+        "stdev": 24.67,
+        "max": 737.6,
+        "min": 650.1,
+        "median": 708.8
+      },
+      "trials": [
+        {
+          "score": 332.8,
+          "valid": true,
+          "ms": 689.0
+        },
+        {
+          "score": 333.9,
+          "valid": true,
+          "ms": 650.1
+        },
+        {
+          "score": 332.6,
+          "valid": true,
+          "ms": 705.3
+        },
+        {
+          "score": 334.9,
+          "valid": true,
+          "ms": 681.0
+        },
+        {
+          "score": 338.1,
+          "valid": true,
+          "ms": 667.9
+        },
+        {
+          "score": 333.6,
+          "valid": true,
+          "ms": 713.5
+        },
+        {
+          "score": 334.3,
+          "valid": true,
+          "ms": 724.9
+        },
+        {
+          "score": 303.6,
+          "valid": true,
+          "ms": 737.6
+        },
+        {
+          "score": 334.0,
+          "valid": true,
+          "ms": 702.0
+        },
+        {
+          "score": 335.3,
+          "valid": true,
+          "ms": 708.1
+        },
+        {
+          "score": 334.6,
+          "valid": true,
+          "ms": 722.5
+        },
+        {
+          "score": 334.7,
+          "valid": true,
+          "ms": 708.8
+        },
+        {
+          "score": 331.2,
+          "valid": true,
+          "ms": 726.6
+        },
+        {
+          "score": 335.0,
+          "valid": true,
+          "ms": 723.0
+        },
+        {
+          "score": 333.2,
+          "valid": true,
+          "ms": 730.6
+        }
+      ],
+      "avg_history": [
+        334.97,
+        335.47,
+        335.47,
+        335.97,
+        338.68,
+        339.78,
+        341.33,
+        344.5,
+        347.05,
+        349.65,
+        352.69,
+        355.21,
+        357.25,
+        358.26,
+        360.0,
+        363.18,
+        366.73,
+        369.79,
+        372.38,
+        374.95,
+        376.56,
+        378.63,
+        381.59,
+        384.17,
+        385.23,
+        387.76
+      ]
+    },
+    "Hybrid": {
+      "n": 15,
+      "valid": 15,
+      "score_stats": {
+        "mean": 347.4,
+        "stdev": 0.96,
+        "max": 348.5,
+        "min": 345.8,
+        "median": 347.8
+      },
+      "time_stats": {
+        "mean": 219.45,
+        "stdev": 10.12,
+        "max": 246.5,
+        "min": 200.1,
+        "median": 219.0
+      },
+      "trials": [
+        {
+          "score": 346.9,
+          "valid": true,
+          "ms": 226.6
+        },
+        {
+          "score": 348.0,
+          "valid": true,
+          "ms": 215.2
+        },
+        {
+          "score": 347.8,
+          "valid": true,
+          "ms": 214.5
+        },
+        {
+          "score": 347.1,
+          "valid": true,
+          "ms": 200.1
+        },
+        {
+          "score": 348.5,
+          "valid": true,
+          "ms": 211.9
+        },
+        {
+          "score": 346.2,
+          "valid": true,
+          "ms": 216.4
+        },
+        {
+          "score": 345.8,
+          "valid": true,
+          "ms": 219.0
+        },
+        {
+          "score": 348.2,
+          "valid": true,
+          "ms": 213.5
+        },
+        {
+          "score": 348.4,
+          "valid": true,
+          "ms": 227.6
+        },
+        {
+          "score": 347.8,
+          "valid": true,
+          "ms": 219.1
+        },
+        {
+          "score": 347.3,
+          "valid": true,
+          "ms": 221.8
+        },
+        {
+          "score": 345.9,
+          "valid": true,
+          "ms": 213.7
+        },
+        {
+          "score": 348.3,
+          "valid": true,
+          "ms": 246.5
+        },
+        {
+          "score": 348.4,
+          "valid": true,
+          "ms": 224.2
+        },
+        {
+          "score": 346.4,
+          "valid": true,
+          "ms": 221.6
+        }
+      ],
+      "avg_history": [
+        379.97,
+        379.97,
+        380.02,
+        380.04,
+        380.35,
+        380.54,
+        380.65,
+        380.76,
+        380.95,
+        381.01,
+        381.1,
+        381.28,
+        381.31,
+        381.35,
+        381.59,
+        381.79,
+        381.79,
+        381.8,
+        382.02,
+        382.06,
+        382.06
+      ]
+    },
+    "kruskal": {
+      "H": 22.6581,
+      "p": 1.2e-05,
+      "sig": "***"
+    }
+  }
+}

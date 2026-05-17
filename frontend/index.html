@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeEasyTrip</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background: aurora orbs + grid + grain -->
+  <div class="bg-layers" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-aurora">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+      <div class="orb orb-5"></div>
+    </div>
+    <div class="bg-grain"></div>
+  </div>
+
+  <!-- Landing screen (fits exactly 100vh) -->
+  <div class="landing-screen">
+
+  <!-- Top navigation -->
+  <nav class="topbar">
+    <div class="brand">
+      <div class="brand-text">
+        <h1>WeEasy<span class="brand-trip">Trip</span></h1>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero visual -->
+  <section class="hero-visual">
+    <div class="hero-bg" style="background-image:url('BG2.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label">Your Travel Services</span>
+      <h1 class="hero-h1">วางแผนเที่ยวไทยได้ง่ายๆ</h1>
+      <p class="hero-desc">ระบบ AI หาเส้นทางที่ดีที่สุดภายใต้งบประมาณ เวลา และช่วงเวลาเปิด-ปิดของแต่ละสถานที่</p>
+    </div>
+  </section>
+
+  <!-- Planner panel -->
+  <div class="planner-wrapper">
+    <div class="planner-panel">
+      <div class="planner-top-row">
+        <span class="step-badge">Step 1</span>
+        <h3 class="planner-title">วางแผนทริป</h3>
+        <span id="apiStatus" class="api-status ml-auto">
+          <span class="dot"></span><span class="status-text">connecting...</span>
+        </span>
+      </div>
+
+      <div class="pf-grid">
+        <!-- จังหวัด -->
+        <div class="pf-col">
+          <label class="pf-label">จังหวัด</label>
+          <input type="hidden" id="province" value="phuket"/>
+          <div class="prov-select" id="provSelect" onclick="toggleProvDropdown(event)">
+            <span class="prov-name" id="provName">ภูเก็ต</span>
+            <svg class="prov-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="pf-hint"></div>
+          <div class="prov-dropdown" id="provDropdown">
+            <div class="prov-search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" id="provSearch" placeholder="ค้นหาจังหวัด..." oninput="filterProvince(this.value)" autocomplete="off"/>
+            </div>
+            <div class="prov-list" id="provList">
+              <div class="prov-item prov-active" data-value="phuket" data-label="ภูเก็ต" onclick="selectProvince(this)">
+                <span class="prov-item-name">ภูเก็ต</span>
+                <span class="prov-item-badge">พร้อมใช้งาน</span>
+              </div>
+              <div class="prov-group-label">ภาคเหนือ</div>
+              <div class="prov-item prov-disabled" data-label="เชียงใหม่"><span class="prov-item-name">เชียงใหม่</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="เชียงราย"><span class="prov-item-name">เชียงราย</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="แม่ฮ่องสอน"><span class="prov-item-name">แม่ฮ่องสอน</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="น่าน"><span class="prov-item-name">น่าน</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="เลย"><span class="prov-item-name">เลย</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-group-label">ภาคกลาง</div>
+              <div class="prov-item prov-disabled" data-label="กรุงเทพมหานคร"><span class="prov-item-name">กรุงเทพมหานคร</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="นครปฐม"><span class="prov-item-name">นครปฐม</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="พระนครศรีอยุธยา"><span class="prov-item-name">พระนครศรีอยุธยา</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-group-label">ภาคตะวันออก</div>
+              <div class="prov-item prov-disabled" data-label="ชลบุรี"><span class="prov-item-name">ชลบุรี</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="ระยอง"><span class="prov-item-name">ระยอง</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="จันทบุรี"><span class="prov-item-name">จันทบุรี</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-group-label">ภาคใต้</div>
+              <div class="prov-item prov-disabled" data-label="กระบี่"><span class="prov-item-name">กระบี่</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="สุราษฎร์ธานี"><span class="prov-item-name">สุราษฎร์ธานี</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="นครศรีธรรมราช"><span class="prov-item-name">นครศรีธรรมราช</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="พังงา"><span class="prov-item-name">พังงา</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="ตรัง"><span class="prov-item-name">ตรัง</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-group-label">ภาคอีสาน</div>
+              <div class="prov-item prov-disabled" data-label="ขอนแก่น"><span class="prov-item-name">ขอนแก่น</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="นครราชสีมา"><span class="prov-item-name">นครราชสีมา</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+              <div class="prov-item prov-disabled" data-label="อุบลราชธานี"><span class="prov-item-name">อุบลราชธานี</span><span class="prov-item-soon">เร็วๆ นี้</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- งบประมาณ -->
+        <div class="pf-col">
+          <label class="pf-label">งบประมาณ</label>
+          <div class="input-with-unit">
+            <input type="number" id="budget" value="20000" min="1000" step="500"/>
+            <span class="unit">บาท</span>
+          </div>
+          <div class="pf-hint">1,000 – 100,000 บาท</div>
+        </div>
+        <!-- วันเดินทาง -->
+        <div class="pf-col pf-col-wide">
+          <label class="pf-label">ช่วงวันเดินทาง</label>
+          <div class="date-range-input">
+            <svg class="date-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <input type="text" id="dateRange" placeholder="เลือกช่วงวันเดินทาง..." readonly/>
+          </div>
+          <div class="date-summary pf-hint" id="dateSummary">เลือกวันเช็คอินและเช็คเอาต์</div>
+        </div>
+        <!-- จำนวนคน -->
+        <div class="pf-col">
+          <label class="pf-label">จำนวนคน</label>
+          <div class="counter-control">
+            <button onclick="changeTravelers(-1)">−</button>
+            <input type="number" id="travelers" value="2" min="1" max="10" readonly/>
+            <button onclick="changeTravelers(1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pf-divider"></div>
+
+      <div class="pf-grid pf-grid-b">
+        <!-- ที่พัก -->
+        <div class="pf-col pf-col-hotel">
+          <label class="pf-label">ที่พัก</label>
+          <div class="hotel-card" id="hotelOptionCard" onclick="toggleHotelOption()">
+            <div class="hotel-card-icon" id="hotelCardIcon">🏨</div>
+            <div class="hotel-card-body">
+              <span class="hotel-card-title" id="hotelToggleLabel">รวมค่าโรงแรมในงบประมาณ</span>
+            </div>
+            <div class="hotel-card-switch" onclick="event.stopPropagation()">
+              <input type="checkbox" id="includeHotel" checked onchange="onHotelToggle()"/>
+              <label for="includeHotel" class="toggle-track"><span class="toggle-thumb"></span></label>
+            </div>
+          </div>
+          <div class="pf-hint" id="hotelHint">หักค่าโรงแรมออกจากงบก่อนวางแผนกิจกรรม</div>
+        </div>
+        <!-- อัลกอริทึม -->
+        <div class="pf-col pf-col-algo">
+          <label class="pf-label">อัลกอริทึม</label>
+          <div class="algo-segment" id="algoControl">
+            <button data-val="greedy" title="เร็วสุด"><span class="btn-icon">⚡</span> Greedy</button>
+            <button data-val="ga" title="Global optimization"><span class="btn-icon">🚀</span> GA</button>
+            <button data-val="hybrid" class="active" title="แนะนำ"><span class="btn-icon">⭐</span> Hybrid</button>
+          </div>
+          <div class="pf-hint" id="algoHint">Hybrid: รวมข้อดีของ Greedy + GA + 2-opt</div>
+        </div>
+        <!-- ปุ่มค้นหา -->
+        <div class="pf-col pf-col-search">
+          <label class="pf-label">&nbsp;</label>
+          <button id="searchBtn" class="cta-btn" onclick="searchPackages()">
+            <span class="btn-content">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+              <span>ค้นหา</span>
+            </span>
+            <span class="btn-loader">
+              <svg class="spinner" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="3" fill="none"></circle></svg>
+              <span>กำลังคำนวณ...</span>
+            </span>
+          </button>
+          <div class="pf-hint"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /landing-screen -->
+
+    <!-- Packages section -->
+  <section class="packages-section" id="packagesSection" style="display:none;">
+    <div class="section-head">
+      <div>
+        <span class="step-badge">Step 2</span>
+        <h2>เลือกแพ็กเกจที่คุณชอบ</h2>
+      </div>
+      <div class="meta-summary" id="metaSummary"></div>
+    </div>
+    <div class="packages-grid" id="packagesRow"></div>
+  </section>
+
+  <!-- Detail section: side panel + map -->
+  <section class="detail-section" id="detailPanel" style="display:none;">
+    <div class="section-head">
+      <div>
+        <span class="step-badge">Step 3</span>
+        <h2 id="detailTitle">ปรับแต่งทริปของคุณ</h2>
+      </div>
+      <div class="detail-actions">
+        <span class="kpi" id="kpiScore"><span class="kpi-label">Score</span><span class="kpi-val">—</span></span>
+        <span class="kpi" id="kpiCost"><span class="kpi-label">Cost</span><span class="kpi-val">—</span></span>
+        <span class="kpi" id="kpiPois"><span class="kpi-label">POIs</span><span class="kpi-val">—</span></span>
+        <button class="reshuffle-btn" onclick="reshufflePackage()" title="สุ่มสถานที่ใหม่ด้วย algorithm เดิม">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          Re-shuffle
+        </button>
+      </div>
+    </div>
+    <div class="detail-grid">
+      <div class="day-list" id="dayPanels"></div>
+      <div class="map-wrap">
+        <div class="day-toggles" id="dayToggles"></div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading skeleton template -->
+  <template id="skeletonTemplate">
+    <div class="package-card skeleton">
+      <div class="sk sk-tier"></div>
+      <div class="sk sk-title"></div>
+      <div class="sk sk-row"></div>
+      <div class="sk sk-row"></div>
+      <div class="sk sk-row"></div>
+    </div>
+  </template>
+
+  <!-- Swap modal -->
+  <div class="modal" id="swapModal">
+    <div class="modal-backdrop" onclick="closeSwapModal()"></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div class="modal-title" id="swapTitle">เปลี่ยนสถานที่</div>
+          <div class="modal-sub" id="swapCurrentInfo"></div>
+        </div>
+        <button class="icon-btn" onclick="closeSwapModal()" title="ปิด">✕</button>
+      </div>
+      <div class="modal-search">
+        <input type="text" id="swapFilter" placeholder="🔍 ค้นหาสถานที่..." oninput="filterSwapList()" />
+      </div>
+      <div class="modal-body">
+        <ul id="swapList" class="swap-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="app.js"></script>
+
+  <script>
+  // Province dropdown
+  function toggleProvDropdown(e) {
+    e.stopPropagation();
+    const dd = document.getElementById('provDropdown');
+    const sel = document.getElementById('provSelect');
+    const isOpen = dd.classList.contains('open');
+    closeProvDropdown();
+    if (!isOpen) {
+      // รีเซต drop-up ก่อน แล้วค่อยตรวจพื้นที่ใหม่
+      dd.classList.remove('drop-up');
+      const selRect = sel.getBoundingClientRect();
+      const dropW = 280;
+      const dropH = 340;
+      // จัด center ตาม trigger แล้ว clamp ให้ไม่เกินขอบจอ
+      const idealLeft = selRect.left + selRect.width / 2 - dropW / 2;
+      const clampedLeft = Math.max(8, Math.min(idealLeft, window.innerWidth - dropW - 8));
+      // แปลงเป็น offset จาก parent (.pf-col ที่มี position: relative)
+      const colRect = sel.closest('.pf-col').getBoundingClientRect();
+      dd.style.left = (clampedLeft - colRect.left) + 'px';
+      const spaceBelow = window.innerHeight - selRect.bottom;
+      if (spaceBelow < dropH) {
+        dd.classList.add('drop-up');
+      }
+      dd.classList.add('open');
+      sel.classList.add('open');
+      setTimeout(() => document.getElementById('provSearch').focus(), 50);
+    }
+  }
+  function closeProvDropdown() {
+    document.getElementById('provDropdown').classList.remove('open');
+    document.getElementById('provSelect').classList.remove('open');
+    document.getElementById('provSearch').value = '';
+    filterProvince('');
+  }
+  function selectProvince(el) {
+    if (el.classList.contains('prov-disabled')) return;
+    document.querySelectorAll('.prov-item').forEach(i => i.classList.remove('prov-active'));
+    el.classList.add('prov-active');
+    document.getElementById('province').value = el.dataset.value;
+    document.getElementById('provName').textContent = el.dataset.label;
+    closeProvDropdown();
+  }
+  function filterProvince(q) {
+    const term = q.trim().toLowerCase();
+    const items = document.querySelectorAll('#provList .prov-item');
+    const groups = document.querySelectorAll('#provList .prov-group-label');
+    let visibleInGroup = {};
+    let gi = -1;
+    groups.forEach((g, i) => { visibleInGroup[i] = 0; });
+    items.forEach(item => {
+      const name = item.dataset.label ? item.dataset.label.toLowerCase() : '';
+      const match = !term || name.includes(term);
+      item.style.display = match ? '' : 'none';
+      // find group index
+      let prev = item.previousElementSibling;
+      while (prev) {
+        if (prev.classList.contains('prov-group-label')) {
+          const idx = Array.from(groups).indexOf(prev);
+          if (match && idx >= 0) visibleInGroup[idx] = (visibleInGroup[idx]||0) + 1;
+          break;
+        }
+        prev = prev.previousElementSibling;
+      }
+    });
+    groups.forEach((g, i) => { g.style.display = visibleInGroup[i] > 0 ? '' : 'none'; });
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('#provSelect') && !e.target.closest('#provDropdown')) closeProvDropdown();
+  });
+  </script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

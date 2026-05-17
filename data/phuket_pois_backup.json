@@ -1,0 +1,1646 @@
+{
+  "pois": [
+    {
+      "name_en": "Patong Beach",
+      "name_th": "หาดป่าตอง",
+      "category": "beach",
+      "lat": 7.8961,
+      "lng": 98.2966,
+      "score": 8.5,
+      "cost": 0,
+      "duration_min": 120,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "swimming",
+        "nightlife"
+      ],
+      "id": "P01"
+    },
+    {
+      "name_en": "Kata Beach",
+      "name_th": "หาดกะตะ",
+      "category": "beach",
+      "lat": 7.8204,
+      "lng": 98.2983,
+      "score": 8.8,
+      "cost": 0,
+      "duration_min": 120,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "surfing",
+        "family"
+      ],
+      "id": "P02"
+    },
+    {
+      "name_en": "Karon Beach",
+      "name_th": "หาดกะรน",
+      "category": "beach",
+      "lat": 7.8448,
+      "lng": 98.2942,
+      "score": 8.2,
+      "cost": 0,
+      "duration_min": 100,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "quiet",
+        "long"
+      ],
+      "id": "P03"
+    },
+    {
+      "name_en": "Nai Harn Beach",
+      "name_th": "หาดในหาน",
+      "category": "beach",
+      "lat": 7.7714,
+      "lng": 98.3044,
+      "score": 9.0,
+      "cost": 0,
+      "duration_min": 120,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "scenic",
+        "clear-water"
+      ],
+      "id": "P04"
+    },
+    {
+      "name_en": "Surin Beach",
+      "name_th": "หาดสุรินทร์",
+      "category": "beach",
+      "lat": 8.0131,
+      "lng": 98.2769,
+      "score": 8.3,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "upscale",
+        "snorkeling"
+      ],
+      "id": "P05"
+    },
+    {
+      "name_en": "Bang Tao Beach",
+      "name_th": "หาดบางเทา",
+      "category": "beach",
+      "lat": 8.0444,
+      "lng": 98.2719,
+      "score": 8.0,
+      "cost": 0,
+      "duration_min": 100,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "long",
+        "resort"
+      ],
+      "id": "P06"
+    },
+    {
+      "name_en": "Kamala Beach",
+      "name_th": "หาดกมลา",
+      "category": "beach",
+      "lat": 7.9594,
+      "lng": 98.2756,
+      "score": 7.8,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "peaceful",
+        "local"
+      ],
+      "id": "P07"
+    },
+    {
+      "name_en": "Nai Yang Beach",
+      "name_th": "หาดในยาง",
+      "category": "beach",
+      "lat": 8.1503,
+      "lng": 98.2994,
+      "score": 7.5,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "quiet",
+        "natural"
+      ],
+      "id": "P08"
+    },
+    {
+      "name_en": "Ao Sane Beach",
+      "name_th": "หาดอ่าวสาน",
+      "category": "beach",
+      "lat": 7.7636,
+      "lng": 98.3117,
+      "score": 8.1,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "snorkeling",
+        "hidden"
+      ],
+      "id": "P09"
+    },
+    {
+      "name_en": "Laem Ka Beach",
+      "name_th": "หาดแหลมกา",
+      "category": "beach",
+      "lat": 7.8011,
+      "lng": 98.3453,
+      "score": 7.6,
+      "cost": 0,
+      "duration_min": 80,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "beach",
+        "local",
+        "quiet"
+      ],
+      "id": "P10"
+    },
+    {
+      "name_en": "Wat Chalong",
+      "name_th": "วัดฉลอง",
+      "category": "temple",
+      "lat": 7.8463,
+      "lng": 98.3376,
+      "score": 8.7,
+      "cost": 0,
+      "duration_min": 60,
+      "open_min": 420,
+      "close_min": 1080,
+      "tags": [
+        "temple",
+        "sacred",
+        "photography"
+      ],
+      "id": "P11"
+    },
+    {
+      "name_en": "Big Buddha Phuket",
+      "name_th": "พระพุทธมิ่งมงคลเอกนาคคีรี",
+      "category": "temple",
+      "lat": 7.8275,
+      "lng": 98.3119,
+      "score": 9.2,
+      "cost": 0,
+      "duration_min": 75,
+      "open_min": 360,
+      "close_min": 1140,
+      "tags": [
+        "landmark",
+        "hilltop",
+        "panoramic"
+      ],
+      "id": "P12"
+    },
+    {
+      "name_en": "Wat Phra Nang Sang",
+      "name_th": "วัดพระนางสร้าง",
+      "category": "temple",
+      "lat": 7.9394,
+      "lng": 98.3567,
+      "score": 7.2,
+      "cost": 0,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 1080,
+      "tags": [
+        "temple",
+        "historical",
+        "local"
+      ],
+      "id": "P13"
+    },
+    {
+      "name_en": "Wat Sri Sunthon",
+      "name_th": "วัดศรีสุนทร",
+      "category": "temple",
+      "lat": 8.0,
+      "lng": 98.3436,
+      "score": 7.0,
+      "cost": 0,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 1080,
+      "tags": [
+        "temple",
+        "peaceful",
+        "culture"
+      ],
+      "id": "P14"
+    },
+    {
+      "name_en": "Wat Kathu",
+      "name_th": "วัดกะทู้",
+      "category": "temple",
+      "lat": 7.9167,
+      "lng": 98.322,
+      "score": 6.8,
+      "cost": 0,
+      "duration_min": 40,
+      "open_min": 480,
+      "close_min": 1080,
+      "tags": [
+        "temple",
+        "community",
+        "local"
+      ],
+      "id": "P15"
+    },
+    {
+      "name_en": "Karon Viewpoint",
+      "name_th": "จุดชมวิวกะรน",
+      "category": "viewpoint",
+      "lat": 7.8183,
+      "lng": 98.3018,
+      "score": 9.0,
+      "cost": 0,
+      "duration_min": 45,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "viewpoint",
+        "panoramic",
+        "3beaches"
+      ],
+      "id": "P16"
+    },
+    {
+      "name_en": "Promthep Cape",
+      "name_th": "แหลมพรหมเทพ",
+      "category": "viewpoint",
+      "lat": 7.7656,
+      "lng": 98.3069,
+      "score": 9.1,
+      "cost": 0,
+      "duration_min": 60,
+      "open_min": 360,
+      "close_min": 1200,
+      "tags": [
+        "viewpoint",
+        "sunset",
+        "landmark"
+      ],
+      "id": "P17"
+    },
+    {
+      "name_en": "Rang Hill",
+      "name_th": "เขารัง",
+      "category": "viewpoint",
+      "lat": 7.8925,
+      "lng": 98.3878,
+      "score": 7.8,
+      "cost": 0,
+      "duration_min": 50,
+      "open_min": 480,
+      "close_min": 1200,
+      "tags": [
+        "viewpoint",
+        "cityview",
+        "park"
+      ],
+      "id": "P18"
+    },
+    {
+      "name_en": "Windmill Viewpoint",
+      "name_th": "จุดชมวิวกังหันลม",
+      "category": "viewpoint",
+      "lat": 7.77,
+      "lng": 98.3089,
+      "score": 8.0,
+      "cost": 0,
+      "duration_min": 30,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "viewpoint",
+        "windmill",
+        "sunset"
+      ],
+      "id": "P19"
+    },
+    {
+      "name_en": "Monkey Hill",
+      "name_th": "เขาโต๊ะแซะ",
+      "category": "viewpoint",
+      "lat": 7.9031,
+      "lng": 98.3864,
+      "score": 7.5,
+      "cost": 0,
+      "duration_min": 60,
+      "open_min": 360,
+      "close_min": 1200,
+      "tags": [
+        "viewpoint",
+        "monkeys",
+        "hiking"
+      ],
+      "id": "P20"
+    },
+    {
+      "name_en": "Radar Hill Viewpoint",
+      "name_th": "จุดชมวิวเรดาร์ฮิลล์",
+      "category": "viewpoint",
+      "lat": 7.8819,
+      "lng": 98.2978,
+      "score": 8.3,
+      "cost": 0,
+      "duration_min": 40,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "viewpoint",
+        "sea",
+        "military"
+      ],
+      "id": "P21"
+    },
+    {
+      "name_en": "Kata Noi Viewpoint",
+      "name_th": "จุดชมวิวกะตะน้อย",
+      "category": "viewpoint",
+      "lat": 7.8139,
+      "lng": 98.3021,
+      "score": 8.1,
+      "cost": 0,
+      "duration_min": 30,
+      "open_min": 360,
+      "close_min": 1200,
+      "tags": [
+        "viewpoint",
+        "beach",
+        "scenic"
+      ],
+      "id": "P22"
+    },
+    {
+      "name_en": "Khao Khad Viewpoint",
+      "name_th": "จุดชมวิวเขาขาด",
+      "category": "viewpoint",
+      "lat": 7.8614,
+      "lng": 98.4011,
+      "score": 7.9,
+      "cost": 0,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 1140,
+      "tags": [
+        "viewpoint",
+        "panoramic",
+        "east-coast"
+      ],
+      "id": "P23"
+    },
+    {
+      "name_en": "Phuket Old Town",
+      "name_th": "เมืองเก่าภูเก็ต",
+      "category": "culture",
+      "lat": 7.8856,
+      "lng": 98.3922,
+      "score": 8.9,
+      "cost": 0,
+      "duration_min": 120,
+      "open_min": 480,
+      "close_min": 1320,
+      "tags": [
+        "culture",
+        "sino-portuguese",
+        "walking"
+      ],
+      "id": "P24"
+    },
+    {
+      "name_en": "Thai Hua Museum",
+      "name_th": "พิพิธภัณฑ์ไทยหัว",
+      "category": "culture",
+      "lat": 7.8844,
+      "lng": 98.3931,
+      "score": 7.8,
+      "cost": 200,
+      "duration_min": 75,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "museum",
+        "history",
+        "chinese-heritage"
+      ],
+      "id": "P25"
+    },
+    {
+      "name_en": "Phuket Trickeye Museum",
+      "name_th": "พิพิธภัณฑ์ทริคอาย",
+      "category": "culture",
+      "lat": 7.8878,
+      "lng": 98.3847,
+      "score": 7.5,
+      "cost": 350,
+      "duration_min": 90,
+      "open_min": 540,
+      "close_min": 1200,
+      "tags": [
+        "museum",
+        "interactive",
+        "photography"
+      ],
+      "id": "P26"
+    },
+    {
+      "name_en": "Phuket Butterfly Garden",
+      "name_th": "สวนผีเสื้อภูเก็ต",
+      "category": "culture",
+      "lat": 7.9089,
+      "lng": 98.3617,
+      "score": 7.0,
+      "cost": 150,
+      "duration_min": 60,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "garden",
+        "nature",
+        "educational"
+      ],
+      "id": "P27"
+    },
+    {
+      "name_en": "Baan Chinpracha",
+      "name_th": "บ้านชินประชา",
+      "category": "culture",
+      "lat": 7.8842,
+      "lng": 98.3933,
+      "score": 7.3,
+      "cost": 100,
+      "duration_min": 45,
+      "open_min": 540,
+      "close_min": 1020,
+      "tags": [
+        "heritage",
+        "sino-portuguese",
+        "history"
+      ],
+      "id": "P28"
+    },
+    {
+      "name_en": "Phuket Mining Museum",
+      "name_th": "พิพิธภัณฑ์เหมืองแร่",
+      "category": "culture",
+      "lat": 7.9161,
+      "lng": 98.3356,
+      "score": 6.8,
+      "cost": 100,
+      "duration_min": 60,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "museum",
+        "tin-mining",
+        "local-history"
+      ],
+      "id": "P29"
+    },
+    {
+      "name_en": "Heroines Monument",
+      "name_th": "อนุสาวรีย์สองวีรสตรี",
+      "category": "culture",
+      "lat": 7.9928,
+      "lng": 98.3475,
+      "score": 7.1,
+      "cost": 0,
+      "duration_min": 30,
+      "open_min": 360,
+      "close_min": 1320,
+      "tags": [
+        "monument",
+        "history",
+        "landmark"
+      ],
+      "id": "P30"
+    },
+    {
+      "name_en": "Phuket Cultural Centre",
+      "name_th": "ศูนย์วัฒนธรรมภูเก็ต",
+      "category": "culture",
+      "lat": 7.8947,
+      "lng": 98.3912,
+      "score": 6.9,
+      "cost": 0,
+      "duration_min": 45,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "culture",
+        "arts",
+        "local"
+      ],
+      "id": "P31"
+    },
+    {
+      "name_en": "Patong Night Bazaar",
+      "name_th": "ไนท์บาซาร์ป่าตอง",
+      "category": "market",
+      "lat": 7.8956,
+      "lng": 98.2983,
+      "score": 7.8,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 1020,
+      "close_min": 1380,
+      "tags": [
+        "market",
+        "shopping",
+        "souvenirs"
+      ],
+      "id": "P32"
+    },
+    {
+      "name_en": "Phuket Weekend Market",
+      "name_th": "ตลาดนัดสุดสัปดาห์ภูเก็ต",
+      "category": "market",
+      "lat": 7.9222,
+      "lng": 98.3678,
+      "score": 8.0,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 960,
+      "close_min": 1320,
+      "tags": [
+        "market",
+        "local",
+        "street-food"
+      ],
+      "id": "P33"
+    },
+    {
+      "name_en": "Old Town Sunday Walking Street",
+      "name_th": "ถนนคนเดินเมืองเก่า",
+      "category": "market",
+      "lat": 7.8839,
+      "lng": 98.3944,
+      "score": 8.5,
+      "cost": 0,
+      "duration_min": 90,
+      "open_min": 1020,
+      "close_min": 1320,
+      "tags": [
+        "market",
+        "walking-street",
+        "food"
+      ],
+      "id": "P34"
+    },
+    {
+      "name_en": "Malin Plaza Patong",
+      "name_th": "มาลินพลาซ่าป่าตอง",
+      "category": "market",
+      "lat": 7.9008,
+      "lng": 98.2992,
+      "score": 7.2,
+      "cost": 0,
+      "duration_min": 60,
+      "open_min": 960,
+      "close_min": 1320,
+      "tags": [
+        "market",
+        "food",
+        "local"
+      ],
+      "id": "P35"
+    },
+    {
+      "name_en": "Chillva Market",
+      "name_th": "ตลาดชิลวา",
+      "category": "market",
+      "lat": 7.9108,
+      "lng": 98.3856,
+      "score": 7.6,
+      "cost": 0,
+      "duration_min": 75,
+      "open_min": 1020,
+      "close_min": 1320,
+      "tags": [
+        "market",
+        "trendy",
+        "night"
+      ],
+      "id": "P36"
+    },
+    {
+      "name_en": "Phuket Aquarium",
+      "name_th": "พิพิธภัณฑ์สัตว์น้ำภูเก็ต",
+      "category": "activity",
+      "lat": 7.8019,
+      "lng": 98.3603,
+      "score": 7.8,
+      "cost": 180,
+      "duration_min": 90,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "aquarium",
+        "family",
+        "marine"
+      ],
+      "id": "P37"
+    },
+    {
+      "name_en": "Simon Cabaret Show",
+      "name_th": "ไซม่อน คาบาเร่ต์",
+      "category": "activity",
+      "lat": 7.8978,
+      "lng": 98.2983,
+      "score": 8.0,
+      "cost": 800,
+      "duration_min": 75,
+      "open_min": 1140,
+      "close_min": 1320,
+      "tags": [
+        "cabaret",
+        "show",
+        "entertainment"
+      ],
+      "id": "P38"
+    },
+    {
+      "name_en": "Phuket FantaSea",
+      "name_th": "ภูเก็ตแฟนตาซี",
+      "category": "activity",
+      "lat": 7.9569,
+      "lng": 98.2772,
+      "score": 8.2,
+      "cost": 1800,
+      "duration_min": 180,
+      "open_min": 1080,
+      "close_min": 1380,
+      "tags": [
+        "show",
+        "cultural",
+        "family"
+      ],
+      "id": "P39"
+    },
+    {
+      "name_en": "Splash Jungle Water Park",
+      "name_th": "สแปลช จังเกิ้ล",
+      "category": "activity",
+      "lat": 8.1497,
+      "lng": 98.3012,
+      "score": 8.0,
+      "cost": 900,
+      "duration_min": 240,
+      "open_min": 600,
+      "close_min": 1080,
+      "tags": [
+        "waterpark",
+        "family",
+        "thrill"
+      ],
+      "id": "P40"
+    },
+    {
+      "name_en": "Bangla Boxing Stadium",
+      "name_th": "สนามมวยบางลา",
+      "category": "activity",
+      "lat": 7.8961,
+      "lng": 98.2994,
+      "score": 7.5,
+      "cost": 600,
+      "duration_min": 120,
+      "open_min": 1200,
+      "close_min": 1380,
+      "tags": [
+        "muaythai",
+        "sport",
+        "entertainment"
+      ],
+      "id": "P41"
+    },
+    {
+      "name_en": "Phuket Go Kart",
+      "name_th": "โกคาร์ทภูเก็ต",
+      "category": "activity",
+      "lat": 7.9044,
+      "lng": 98.3358,
+      "score": 7.3,
+      "cost": 500,
+      "duration_min": 60,
+      "open_min": 600,
+      "close_min": 1200,
+      "tags": [
+        "gokarting",
+        "fun",
+        "sport"
+      ],
+      "id": "P42"
+    },
+    {
+      "name_en": "Skyline Adventure Phuket",
+      "name_th": "สกายไลน์แอดเวนเจอร์",
+      "category": "activity",
+      "lat": 7.9156,
+      "lng": 98.3219,
+      "score": 8.3,
+      "cost": 2200,
+      "duration_min": 180,
+      "open_min": 480,
+      "close_min": 1080,
+      "tags": [
+        "zipline",
+        "adventure",
+        "forest"
+      ],
+      "id": "P43"
+    },
+    {
+      "name_en": "ATV Phuket",
+      "name_th": "เอทีวีภูเก็ต",
+      "category": "activity",
+      "lat": 7.92,
+      "lng": 98.34,
+      "score": 7.7,
+      "cost": 600,
+      "duration_min": 60,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "atv",
+        "adventure",
+        "offroad"
+      ],
+      "id": "P44"
+    },
+    {
+      "name_en": "Phuket Elephant Sanctuary",
+      "name_th": "สถานดูแลช้างภูเก็ต",
+      "category": "activity",
+      "lat": 7.9281,
+      "lng": 98.3089,
+      "score": 9.1,
+      "cost": 2500,
+      "duration_min": 180,
+      "open_min": 480,
+      "close_min": 900,
+      "tags": [
+        "elephant",
+        "ethical",
+        "nature"
+      ],
+      "id": "P45"
+    },
+    {
+      "name_en": "Kata Hot Yoga",
+      "name_th": "กะตะฮอตโยคะ",
+      "category": "activity",
+      "lat": 7.8194,
+      "lng": 98.2992,
+      "score": 7.0,
+      "cost": 400,
+      "duration_min": 90,
+      "open_min": 480,
+      "close_min": 1200,
+      "tags": [
+        "yoga",
+        "wellness",
+        "health"
+      ],
+      "id": "P46"
+    },
+    {
+      "name_en": "Phuket Shooting Range",
+      "name_th": "สนามยิงปืนภูเก็ต",
+      "category": "activity",
+      "lat": 7.9081,
+      "lng": 98.3328,
+      "score": 7.2,
+      "cost": 800,
+      "duration_min": 60,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "shooting",
+        "sport",
+        "experience"
+      ],
+      "id": "P47"
+    },
+    {
+      "name_en": "Sea Canoe Phang Nga Bay",
+      "name_th": "ล่องเรือแคนูอ่าวพังงา",
+      "category": "activity",
+      "lat": 8.25,
+      "lng": 98.5,
+      "score": 9.4,
+      "cost": 1500,
+      "duration_min": 480,
+      "open_min": 480,
+      "close_min": 1020,
+      "tags": [
+        "canoe",
+        "caves",
+        "nature"
+      ],
+      "id": "P48"
+    },
+    {
+      "name_en": "Phuket Surf School",
+      "name_th": "โรงเรียนเซิร์ฟภูเก็ต",
+      "category": "activity",
+      "lat": 7.82,
+      "lng": 98.2975,
+      "score": 7.8,
+      "cost": 800,
+      "duration_min": 120,
+      "open_min": 540,
+      "close_min": 1080,
+      "tags": [
+        "surfing",
+        "beach",
+        "lesson"
+      ],
+      "id": "P49"
+    },
+    {
+      "name_en": "Night Snorkeling Kata",
+      "name_th": "ดำน้ำตื้นกลางคืนกะตะ",
+      "category": "activity",
+      "lat": 7.819,
+      "lng": 98.298,
+      "score": 8.2,
+      "cost": 700,
+      "duration_min": 120,
+      "open_min": 1140,
+      "close_min": 1380,
+      "tags": [
+        "snorkeling",
+        "night",
+        "marine"
+      ],
+      "id": "P50"
+    },
+    {
+      "name_en": "Kan Eang@Pier",
+      "name_th": "กานเอง แอท เพียร์",
+      "category": "restaurant",
+      "lat": 7.8178,
+      "lng": 98.36,
+      "score": 8.5,
+      "cost": 400,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1320,
+      "tags": [
+        "seafood",
+        "pier",
+        "romantic"
+      ],
+      "id": "P51"
+    },
+    {
+      "name_en": "Raya Restaurant",
+      "name_th": "ร้านอาหารระย้า",
+      "category": "restaurant",
+      "lat": 7.8858,
+      "lng": 98.3936,
+      "score": 8.7,
+      "cost": 250,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1320,
+      "tags": [
+        "thai",
+        "local",
+        "oldtown"
+      ],
+      "id": "P52"
+    },
+    {
+      "name_en": "Suay Restaurant",
+      "name_th": "ร้านอาหารสวย",
+      "category": "restaurant",
+      "lat": 7.8861,
+      "lng": 98.3919,
+      "score": 8.3,
+      "cost": 350,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1320,
+      "tags": [
+        "thai-fusion",
+        "creative",
+        "oldtown"
+      ],
+      "id": "P53"
+    },
+    {
+      "name_en": "Nicky's Handlebar",
+      "name_th": "นิคกี้ แฮนเดิ้ลบาร์",
+      "category": "restaurant",
+      "lat": 7.895,
+      "lng": 98.2967,
+      "score": 7.8,
+      "cost": 300,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1440,
+      "tags": [
+        "western",
+        "biker",
+        "patong"
+      ],
+      "id": "P54"
+    },
+    {
+      "name_en": "Madd Madd House",
+      "name_th": "แมด แมด เฮ้าส์",
+      "category": "restaurant",
+      "lat": 7.8947,
+      "lng": 98.2978,
+      "score": 7.5,
+      "cost": 200,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1380,
+      "tags": [
+        "thai",
+        "cheap",
+        "local"
+      ],
+      "id": "P55"
+    },
+    {
+      "name_en": "Pad Thai Fah",
+      "name_th": "ผัดไทยฟ้า",
+      "category": "restaurant",
+      "lat": 7.8861,
+      "lng": 98.3944,
+      "score": 8.1,
+      "cost": 80,
+      "duration_min": 45,
+      "open_min": 660,
+      "close_min": 1200,
+      "tags": [
+        "padthai",
+        "streetfood",
+        "famous"
+      ],
+      "id": "P56"
+    },
+    {
+      "name_en": "Baan Rim Pa",
+      "name_th": "บ้านริมผา",
+      "category": "restaurant",
+      "lat": 7.8975,
+      "lng": 98.2911,
+      "score": 9.0,
+      "cost": 700,
+      "duration_min": 90,
+      "open_min": 1020,
+      "close_min": 1320,
+      "tags": [
+        "royal-thai",
+        "cliffside",
+        "romantic"
+      ],
+      "id": "P57"
+    },
+    {
+      "name_en": "Mom Tri's Kitchen",
+      "name_th": "ครัวคุณแม่ตรี",
+      "category": "restaurant",
+      "lat": 7.8208,
+      "lng": 98.2969,
+      "score": 8.8,
+      "cost": 600,
+      "duration_min": 90,
+      "open_min": 1020,
+      "close_min": 1320,
+      "tags": [
+        "fine-dining",
+        "seafood",
+        "kata"
+      ],
+      "id": "P58"
+    },
+    {
+      "name_en": "Rock Salt",
+      "name_th": "ร็อค ซอลท์",
+      "category": "restaurant",
+      "lat": 7.8461,
+      "lng": 98.2942,
+      "score": 8.4,
+      "cost": 500,
+      "duration_min": 90,
+      "open_min": 1080,
+      "close_min": 1320,
+      "tags": [
+        "seafood",
+        "karon",
+        "beach-view"
+      ],
+      "id": "P59"
+    },
+    {
+      "name_en": "Siam Supper Club",
+      "name_th": "สยาม ซัพเปอร์ คลับ",
+      "category": "restaurant",
+      "lat": 7.9575,
+      "lng": 98.2789,
+      "score": 8.6,
+      "cost": 600,
+      "duration_min": 90,
+      "open_min": 1080,
+      "close_min": 1380,
+      "tags": [
+        "western",
+        "surin",
+        "live-music"
+      ],
+      "id": "P60"
+    },
+    {
+      "name_en": "Street Food Patong",
+      "name_th": "อาหารข้างทางป่าตอง",
+      "category": "restaurant",
+      "lat": 7.8953,
+      "lng": 98.2989,
+      "score": 8.0,
+      "cost": 80,
+      "duration_min": 45,
+      "open_min": 660,
+      "close_min": 1320,
+      "tags": [
+        "streetfood",
+        "cheap",
+        "variety"
+      ],
+      "id": "P61"
+    },
+    {
+      "name_en": "Laem Hin Seafood",
+      "name_th": "แหลมหินซีฟู้ด",
+      "category": "restaurant",
+      "lat": 7.8631,
+      "lng": 98.3928,
+      "score": 8.2,
+      "cost": 300,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1320,
+      "tags": [
+        "seafood",
+        "local",
+        "fresh"
+      ],
+      "id": "P62"
+    },
+    {
+      "name_en": "Kopitiam by Wilai",
+      "name_th": "โกปิเตี๊ยมบายวิไล",
+      "category": "restaurant",
+      "lat": 7.8847,
+      "lng": 98.3931,
+      "score": 8.4,
+      "cost": 120,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 900,
+      "tags": [
+        "breakfast",
+        "peranakan",
+        "oldtown"
+      ],
+      "id": "P63"
+    },
+    {
+      "name_en": "Baitong Restaurant",
+      "name_th": "ร้านอาหารใบตอง",
+      "category": "restaurant",
+      "lat": 7.82,
+      "lng": 98.2989,
+      "score": 7.8,
+      "cost": 200,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "thai",
+        "kata",
+        "local"
+      ],
+      "id": "P64"
+    },
+    {
+      "name_en": "Kata Mama",
+      "name_th": "กะตะมา",
+      "category": "restaurant",
+      "lat": 7.8189,
+      "lng": 98.2986,
+      "score": 7.6,
+      "cost": 150,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "thai",
+        "cheap",
+        "kata"
+      ],
+      "id": "P65"
+    },
+    {
+      "name_en": "Phuket Local Food Restaurant",
+      "name_th": "ร้านอาหารพื้นเมืองภูเก็ต",
+      "category": "restaurant",
+      "lat": 7.8858,
+      "lng": 98.3922,
+      "score": 8.0,
+      "cost": 100,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "local-food",
+        "traditional",
+        "cheap"
+      ],
+      "id": "P66"
+    },
+    {
+      "name_en": "Rawai Seafood Market",
+      "name_th": "ตลาดอาหารทะเลในหาน",
+      "category": "restaurant",
+      "lat": 7.7831,
+      "lng": 98.3339,
+      "score": 8.6,
+      "cost": 250,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "seafood",
+        "market",
+        "fresh"
+      ],
+      "id": "P67"
+    },
+    {
+      "name_en": "Nai Yang Night Market",
+      "name_th": "ตลาดกลางคืนในยาง",
+      "category": "restaurant",
+      "lat": 8.1506,
+      "lng": 98.3019,
+      "score": 7.7,
+      "cost": 80,
+      "duration_min": 60,
+      "open_min": 1020,
+      "close_min": 1320,
+      "tags": [
+        "streetfood",
+        "local",
+        "cheap"
+      ],
+      "id": "P68"
+    },
+    {
+      "name_en": "Patong Beer Garden",
+      "name_th": "พาตอง เบียร์ การ์เด้น",
+      "category": "restaurant",
+      "lat": 7.8947,
+      "lng": 98.2972,
+      "score": 7.3,
+      "cost": 200,
+      "duration_min": 90,
+      "open_min": 1080,
+      "close_min": 1440,
+      "tags": [
+        "bar",
+        "casual",
+        "patong"
+      ],
+      "id": "P69"
+    },
+    {
+      "name_en": "The Boathouse",
+      "name_th": "เดอะ โบ้ทเฮ้าส์",
+      "category": "restaurant",
+      "lat": 7.8183,
+      "lng": 98.2975,
+      "score": 8.9,
+      "cost": 700,
+      "duration_min": 90,
+      "open_min": 1080,
+      "close_min": 1320,
+      "tags": [
+        "fine-dining",
+        "wine",
+        "kata"
+      ],
+      "id": "P70"
+    },
+    {
+      "name_en": "Sabai Corner Ao Yon",
+      "name_th": "สบายคอร์เนอร์อ่าวยน",
+      "category": "restaurant",
+      "lat": 7.8031,
+      "lng": 98.36,
+      "score": 7.9,
+      "cost": 200,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "thai",
+        "bay-view",
+        "relaxed"
+      ],
+      "id": "P71"
+    },
+    {
+      "name_en": "Krua Thara Restaurant",
+      "name_th": "ครัวท่าร้า",
+      "category": "restaurant",
+      "lat": 7.865,
+      "lng": 98.395,
+      "score": 8.1,
+      "cost": 200,
+      "duration_min": 60,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "thai",
+        "local",
+        "phuket-town"
+      ],
+      "id": "P72"
+    },
+    {
+      "name_en": "Hom Hostel Cafe",
+      "name_th": "โฮมฮอสเทลคาเฟ่",
+      "category": "restaurant",
+      "lat": 7.8861,
+      "lng": 98.3908,
+      "score": 7.8,
+      "cost": 120,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 1080,
+      "tags": [
+        "cafe",
+        "breakfast",
+        "oldtown"
+      ],
+      "id": "P73"
+    },
+    {
+      "name_en": "Thanon Talung Chan Food Market",
+      "name_th": "ตลาดอาหารถนนตลาดใหญ่",
+      "category": "restaurant",
+      "lat": 7.8864,
+      "lng": 98.3919,
+      "score": 8.2,
+      "cost": 60,
+      "duration_min": 60,
+      "open_min": 960,
+      "close_min": 1320,
+      "tags": [
+        "streetfood",
+        "local",
+        "variety"
+      ],
+      "id": "P74"
+    },
+    {
+      "name_en": "Karon Cafe",
+      "name_th": "กะรน คาเฟ่",
+      "category": "restaurant",
+      "lat": 7.845,
+      "lng": 98.2956,
+      "score": 7.4,
+      "cost": 150,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 1200,
+      "tags": [
+        "cafe",
+        "karon",
+        "breakfast"
+      ],
+      "id": "P75"
+    },
+    {
+      "name_en": "Tamarind Restaurant",
+      "name_th": "ร้านอาหารมะขาม",
+      "category": "restaurant",
+      "lat": 7.9569,
+      "lng": 98.2778,
+      "score": 8.0,
+      "cost": 300,
+      "duration_min": 75,
+      "open_min": 1080,
+      "close_min": 1320,
+      "tags": [
+        "thai",
+        "surin",
+        "upscale"
+      ],
+      "id": "P76"
+    },
+    {
+      "name_en": "Nikita's Restaurant",
+      "name_th": "นิกิต้า",
+      "category": "restaurant",
+      "lat": 7.7836,
+      "lng": 98.3344,
+      "score": 8.3,
+      "cost": 350,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1320,
+      "tags": [
+        "seafood",
+        "rawai",
+        "sea-view"
+      ],
+      "id": "P77"
+    },
+    {
+      "name_en": "Bang Tao Beach Bar",
+      "name_th": "แบงเทา บีช บาร์",
+      "category": "restaurant",
+      "lat": 8.0447,
+      "lng": 98.2725,
+      "score": 7.6,
+      "cost": 200,
+      "duration_min": 90,
+      "open_min": 660,
+      "close_min": 1380,
+      "tags": [
+        "beach-bar",
+        "casual",
+        "sunset"
+      ],
+      "id": "P78"
+    },
+    {
+      "name_en": "Koh Sirey Seafood",
+      "name_th": "อาหารทะเลเกาะสิเหร่",
+      "category": "restaurant",
+      "lat": 7.8742,
+      "lng": 98.4167,
+      "score": 7.9,
+      "cost": 200,
+      "duration_min": 75,
+      "open_min": 660,
+      "close_min": 1260,
+      "tags": [
+        "seafood",
+        "island",
+        "local"
+      ],
+      "id": "P79"
+    },
+    {
+      "name_en": "Sino-Portuguese Cafe",
+      "name_th": "คาเฟ่สิโน-โปรตุเกส",
+      "category": "restaurant",
+      "lat": 7.8856,
+      "lng": 98.3928,
+      "score": 7.7,
+      "cost": 100,
+      "duration_min": 45,
+      "open_min": 480,
+      "close_min": 1080,
+      "tags": [
+        "cafe",
+        "heritage",
+        "oldtown"
+      ],
+      "id": "P80"
+    }
+  ],
+  "hotels": [
+    {
+      "name_en": "Lub d Phuket Patong",
+      "name_th": "ลับดี ภูเก็ต ป่าตอง",
+      "lat": 7.8956,
+      "lng": 98.2978,
+      "score": 7.8,
+      "cost": 450,
+      "stars": 1,
+      "id": "H01"
+    },
+    {
+      "name_en": "Ibis Styles Phuket City",
+      "name_th": "อิบิส สไตล์ส ภูเก็ต",
+      "lat": 7.8889,
+      "lng": 98.3897,
+      "score": 7.5,
+      "cost": 550,
+      "stars": 2,
+      "id": "H02"
+    },
+    {
+      "name_en": "Anchalee Inn",
+      "name_th": "อัญชลี อินน์",
+      "lat": 7.8947,
+      "lng": 98.2969,
+      "score": 6.8,
+      "cost": 400,
+      "stars": 1,
+      "id": "H03"
+    },
+    {
+      "name_en": "Kata Garden Resort",
+      "name_th": "กะตะการ์เดนรีสอร์ท",
+      "lat": 7.8197,
+      "lng": 98.2978,
+      "score": 7.2,
+      "cost": 600,
+      "stars": 2,
+      "id": "H04"
+    },
+    {
+      "name_en": "Karon Living Room",
+      "name_th": "กะรน ลิฟวิ่งรูม",
+      "lat": 7.8444,
+      "lng": 98.2953,
+      "score": 7.0,
+      "cost": 700,
+      "stars": 2,
+      "id": "H05"
+    },
+    {
+      "name_en": "Patong Buri Resort",
+      "name_th": "ป่าตองบุรีรีสอร์ท",
+      "lat": 7.8964,
+      "lng": 98.2972,
+      "score": 7.3,
+      "cost": 850,
+      "stars": 3,
+      "id": "H06"
+    },
+    {
+      "name_en": "Novotel Phuket Kata Avista",
+      "name_th": "โนโวเทล ภูเก็ต กะตะ อวิสตา",
+      "lat": 7.8203,
+      "lng": 98.2989,
+      "score": 8.2,
+      "cost": 1800,
+      "stars": 4,
+      "id": "H07"
+    },
+    {
+      "name_en": "Ibis Phuket Patong",
+      "name_th": "อิบิส ภูเก็ต ป่าตอง",
+      "lat": 7.9006,
+      "lng": 98.2969,
+      "score": 7.9,
+      "cost": 1100,
+      "stars": 3,
+      "id": "H08"
+    },
+    {
+      "name_en": "Aspery Hotel",
+      "name_th": "แอสเปอรี่ โฮเทล",
+      "lat": 7.8839,
+      "lng": 98.3919,
+      "score": 8.0,
+      "cost": 1200,
+      "stars": 3,
+      "id": "H09"
+    },
+    {
+      "name_en": "Centara Karon Resort",
+      "name_th": "เซ็นทารา กะรน รีสอร์ท",
+      "lat": 7.8456,
+      "lng": 98.2939,
+      "score": 8.3,
+      "cost": 2200,
+      "stars": 4,
+      "id": "H10"
+    },
+    {
+      "name_en": "Holiday Inn Phuket",
+      "name_th": "ฮอลิเดย์ อินน์ ภูเก็ต",
+      "lat": 7.8964,
+      "lng": 98.2983,
+      "score": 8.1,
+      "cost": 1900,
+      "stars": 4,
+      "id": "H11"
+    },
+    {
+      "name_en": "Kamala Beach Resort",
+      "name_th": "กมลา บีช รีสอร์ท",
+      "lat": 7.9597,
+      "lng": 98.2769,
+      "score": 7.7,
+      "cost": 1400,
+      "stars": 3,
+      "id": "H12"
+    },
+    {
+      "name_en": "Novotel Phuket Surin Beach",
+      "name_th": "โนโวเทล ภูเก็ต สุรินทร์ บีช",
+      "lat": 8.0133,
+      "lng": 98.2775,
+      "score": 8.4,
+      "cost": 2400,
+      "stars": 4,
+      "id": "H13"
+    },
+    {
+      "name_en": "SALA Phuket Mai Khao",
+      "name_th": "ศาลา ภูเก็ต ไม้ขาว",
+      "lat": 8.1528,
+      "lng": 98.3006,
+      "score": 8.5,
+      "cost": 2500,
+      "stars": 4,
+      "id": "H14"
+    },
+    {
+      "name_en": "Trisara Phuket",
+      "name_th": "ตรีศรา ภูเก็ต",
+      "lat": 8.0717,
+      "lng": 98.2783,
+      "score": 9.5,
+      "cost": 7500,
+      "stars": 5,
+      "id": "H15"
+    },
+    {
+      "name_en": "Amanpuri",
+      "name_th": "อมันปูรี",
+      "lat": 8.0158,
+      "lng": 98.275,
+      "score": 9.7,
+      "cost": 8000,
+      "stars": 5,
+      "id": "H16"
+    },
+    {
+      "name_en": "Anantara Layan Phuket Resort",
+      "name_th": "อนันตรา ลายัน ภูเก็ต รีสอร์ท",
+      "lat": 8.0567,
+      "lng": 98.2736,
+      "score": 9.3,
+      "cost": 6000,
+      "stars": 5,
+      "id": "H17"
+    },
+    {
+      "name_en": "The Surin Phuket",
+      "name_th": "เดอะ สุรินทร์ ภูเก็ต",
+      "lat": 8.0144,
+      "lng": 98.2764,
+      "score": 9.1,
+      "cost": 4500,
+      "stars": 5,
+      "id": "H18"
+    },
+    {
+      "name_en": "Katathani Phuket Beach Resort",
+      "name_th": "กะตาธานี ภูเก็ต บีช รีสอร์ท",
+      "lat": 7.8147,
+      "lng": 98.3022,
+      "score": 8.8,
+      "cost": 3500,
+      "stars": 5,
+      "id": "H19"
+    },
+    {
+      "name_en": "Mom Tri's Villa Royale",
+      "name_th": "วิลล่า รอยัล ภูเก็ต",
+      "lat": 7.8208,
+      "lng": 98.2969,
+      "score": 9.0,
+      "cost": 4000,
+      "stars": 5,
+      "id": "H20"
+    }
+  ]
+}

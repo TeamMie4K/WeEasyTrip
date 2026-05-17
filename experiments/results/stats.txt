@@ -1,0 +1,30 @@
+======================================================================
+EXPERIMENT RESULTS — WeEasyTrip (Phuket B-TOPTW)
+Trials per algo: GA/Hybrid=15  |  Greedy: 1 (deterministic)
+GA: pop=15, gen=25, mut=0.3
+Hybrid: pop=12, gen=20, mut=0.3 + early-stop(15) + 2-opt
+======================================================================
+
+[ S1_Short_Budget ]
+Algorithm     Mean     Std     Max     Min   Valid
+--------------------------------------------------
+Greedy      148.10    0.00  148.10  148.10   1/1   
+GA          147.51    3.23  151.10  140.30  15/15  
+Hybrid      152.22    0.88  154.00  150.10  15/15  
+  Kruskal-Wallis: H=21.026  p=0.0000  ***
+
+[ S2_Medium_Standard ]
+Algorithm     Mean     Std     Max     Min   Valid
+--------------------------------------------------
+Greedy      244.60    0.00  244.60  244.60   1/1   
+GA          244.49    1.59  246.70  240.90  15/15  
+Hybrid      247.55    1.03  248.90  245.60  15/15  
+  Kruskal-Wallis: H=19.479  p=0.0001  ***
+
+[ S3_Long_Premium ]
+Algorithm     Mean     Std     Max     Min   Valid
+--------------------------------------------------
+Greedy      346.70    0.00  346.70  346.70   0/1   
+GA          332.12    8.04  338.10  303.60  15/15  
+Hybrid      347.40    0.96  348.50  345.80  15/15  
+  Kruskal-Wallis: H=22.658  p=0.0000  ***
